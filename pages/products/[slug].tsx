@@ -7,10 +7,12 @@ import { getAllProducts, getProductBySlug } from "@/lib/products";
 import { Product } from "@/types";
 
 export default function ProductPage({ product }: { product: Product }) {
-  const isOnSale = product.sale_price !== "";
-  const isOutOfStock = product.stock_status === "outofstock";
-  const displayPrice = isOnSale ? product.sale_price : product.regular_price;
+  const isOnSale = product.salePrice != null;
+  const isOutOfStock = !product.inStock;
+  const displayPrice = isOnSale ? product.salePrice : product.price;
   const [activeImage, setActiveImage] = useState(0);
+
+  const images = product.imageUrls.length > 0 ? product.imageUrls : [product.imageUrl];
 
   return (
     <Layout>
@@ -30,10 +32,10 @@ export default function ProductPage({ product }: { product: Product }) {
           {/* Images */}
           <div className="space-y-3">
             <div className="relative aspect-square rounded-2xl overflow-hidden bg-gray-50">
-              {product.images[activeImage] && (
+              {images[activeImage] && (
                 <Image
-                  src={product.images[activeImage].src}
-                  alt={product.images[activeImage].alt}
+                  src={images[activeImage]}
+                  alt={product.name}
                   fill
                   className="object-cover transition-opacity duration-200"
                   priority
@@ -45,11 +47,11 @@ export default function ProductPage({ product }: { product: Product }) {
                 </span>
               )}
             </div>
-            {product.images.length > 1 && (
+            {images.length > 1 && (
               <div className="flex gap-3">
-                {product.images.map((img, i) => (
+                {images.map((src, i) => (
                   <button
-                    key={img.id}
+                    key={i}
                     onClick={() => setActiveImage(i)}
                     className={`relative w-24 h-24 rounded-xl overflow-hidden bg-gray-50 flex-shrink-0 border-2 transition-colors cursor-pointer ${
                       activeImage === i
@@ -58,8 +60,8 @@ export default function ProductPage({ product }: { product: Product }) {
                     }`}
                   >
                     <Image
-                      src={img.src}
-                      alt={img.alt}
+                      src={src}
+                      alt={`${product.name} ${i + 1}`}
                       fill
                       className="object-cover"
                     />
@@ -75,10 +77,10 @@ export default function ProductPage({ product }: { product: Product }) {
             <div className="flex flex-wrap gap-2 mb-4">
               {product.categories.map((cat) => (
                 <span
-                  key={cat}
+                  key={cat.id}
                   className="text-xs text-gray-600 font-medium bg-gray-100 px-2.5 py-1 rounded-full"
                 >
-                  {cat}
+                  {cat.name}
                 </span>
               ))}
             </div>
@@ -88,7 +90,7 @@ export default function ProductPage({ product }: { product: Product }) {
             </h1>
             <p className="text-sm text-gray-400 mb-4">SKU: {product.sku}</p>
             <p className="text-gray-500 leading-relaxed mb-6">
-              {product.short_description}
+              {product.shortDescription}
             </p>
 
             {/* Price */}
@@ -98,16 +100,12 @@ export default function ProductPage({ product }: { product: Product }) {
               </span>
               {isOnSale && (
                 <span className="text-xl text-gray-300 line-through">
-                  ${product.regular_price}
+                  ${product.price}
                 </span>
               )}
               {isOnSale && (
                 <span className="text-sm font-semibold text-orange-500">
-                  Save $
-                  {(
-                    parseFloat(product.regular_price) -
-                    parseFloat(product.sale_price)
-                  ).toFixed(2)}
+                  Save ${(product.price - product.salePrice!).toFixed(2)}
                 </span>
               )}
             </div>
@@ -122,7 +120,7 @@ export default function ProductPage({ product }: { product: Product }) {
               ) : (
                 <span className="inline-flex items-center gap-2 text-sm text-green-600 font-medium">
                   <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                  In stock &mdash; {product.stock_quantity} available
+                  In stock &mdash; {product.stockQuantity} available
                 </span>
               )}
             </div>
@@ -163,7 +161,7 @@ export default function ProductPage({ product }: { product: Product }) {
           </h2>
           <div
             className="product-description max-w-2xl"
-            dangerouslySetInnerHTML={{ __html: product.description }}
+            dangerouslySetInnerHTML={{ __html: product.description.html }}
           />
         </div>
       </div>
@@ -172,7 +170,7 @@ export default function ProductPage({ product }: { product: Product }) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const products = getAllProducts();
+  const products = await getAllProducts();
   return {
     paths: products.map((p) => ({ params: { slug: p.slug } })),
     fallback: false,
@@ -180,7 +178,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const product = getProductBySlug(params?.slug as string);
+  const product = await getProductBySlug(params?.slug as string);
   if (!product) return { notFound: true };
   return { props: { product } };
 };

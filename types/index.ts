@@ -1,26 +1,23 @@
-export interface ProductImage {
-  id: number;
-  src: string;
+export interface ProductCategory {
+  id: string;
   name: string;
-  alt: string;
-  position: number;
+  slug: string;
 }
 
 export interface Product {
-  id: number;
+  id: string;
   name: string;
   slug: string;
   sku: string;
-  type: string;
-  status: string;
-  short_description: string;
-  description: string;
-  regular_price: string;
-  sale_price: string;
+  shortDescription: string;
+  description: { html: string };
+  price: number;
+  salePrice: number | null;
   currency: string;
-  stock_status: string;
-  stock_quantity: number;
-  categories: string[];
+  inStock: boolean;
+  stockQuantity: number;
   tags: string[];
-  images: ProductImage[];
+  imageUrl: string;
+  imageUrls: string[];
+  categories: ProductCategory[];
 }

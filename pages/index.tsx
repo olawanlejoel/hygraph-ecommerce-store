@@ -39,12 +39,12 @@ export default function Home({ featured }: { featured: Product[] }) {
             </div>
 
             {/* Featured image */}
-            {heroProduct?.images[0] && (
+            {heroProduct?.imageUrl && (
               <div className="relative">
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                   <Image
-                    src={heroProduct.images[0].src}
-                    alt={heroProduct.images[0].alt}
+                    src={heroProduct.imageUrl}
+                    alt={heroProduct.name}
                     fill
                     className="object-cover"
                     priority
@@ -62,7 +62,7 @@ export default function Home({ featured }: { featured: Product[] }) {
                     </p>
                   </div>
                   <p className="text-sm font-bold text-gray-900 ml-2">
-                    ${heroProduct.sale_price || heroProduct.regular_price}
+                    ${heroProduct.salePrice ?? heroProduct.price}
                   </p>
                 </div>
               </div>
@@ -118,6 +118,6 @@ export default function Home({ featured }: { featured: Product[] }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const featured = getAllProducts().slice(0, 4);
+  const featured = (await getAllProducts()).slice(0, 4);
   return { props: { featured } };
 };

@@ -3,18 +3,18 @@ import Link from "next/link";
 import { Product } from "@/types";
 
 export default function ProductCard({ product }: { product: Product }) {
-  const isOnSale = product.sale_price !== "";
-  const isOutOfStock = product.stock_status === "outofstock";
-  const displayPrice = isOnSale ? product.sale_price : product.regular_price;
+  const isOnSale = product.salePrice != null;
+  const isOutOfStock = !product.inStock;
+  const displayPrice = isOnSale ? product.salePrice : product.price;
 
   return (
     <Link href={`/products/${product.slug}`} className="group block">
       <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-gray-200 hover:shadow-lg transition-all duration-200">
         <div className="relative aspect-[4/3] bg-gray-50 overflow-hidden">
-          {product.images[0] && (
+          {product.imageUrl && (
             <Image
-              src={product.images[0].src}
-              alt={product.images[0].alt}
+              src={product.imageUrl}
+              alt={product.name}
               fill
               className={`object-cover group-hover:scale-105 transition-transform duration-300 ${
                 isOutOfStock ? "opacity-50" : ""
@@ -34,19 +34,19 @@ export default function ProductCard({ product }: { product: Product }) {
         </div>
         <div className="p-4">
           <p className="text-xs text-gray-400 font-medium mb-1">
-            {product.categories[0]}
+            {product.categories[0]?.name}
           </p>
           <h3 className="font-semibold text-gray-900 text-sm leading-snug line-clamp-2 mb-2 group-hover:text-gray-600 transition-colors">
             {product.name}
           </h3>
           <p className="text-xs text-gray-400 line-clamp-2 mb-3">
-            {product.short_description}
+            {product.shortDescription}
           </p>
           <div className="flex items-center gap-2">
             <span className="font-bold text-gray-900">${displayPrice}</span>
             {isOnSale && (
               <span className="text-sm text-gray-400 line-through">
-                ${product.regular_price}
+                ${product.price}
               </span>
             )}
           </div>
