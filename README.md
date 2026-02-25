@@ -1,40 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Hygraph E-commerce Store Demo
 
-## Getting Started
+A Next.js e-commerce store demo built to accompany an article on migrating WooCommerce data to [Hygraph](https://hygraph.com) using the Hygraph MCP.
 
-First, run the development server:
+## Branches
+
+| Branch | Description |
+|--------|-------------|
+| `starter` | Store running on a local WooCommerce-style JSON export — no Hygraph account needed |
+| `main` | Same store after migrating all data to Hygraph and switching the data layer to GraphQL |
+
+The `starter` branch is the starting point. The `main` branch shows the end result after migration.
+
+## Pages
+
+- `/` — Home page with hero section and featured products
+- `/products` — All products with category filter
+- `/products/[slug]` — Product detail with image gallery, stock status, and tags
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org) (Pages Router)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Hygraph](https://hygraph.com) — Headless CMS (Content API via GraphQL)
+
+## Getting Started (main branch)
+
+1. Clone the repo and install dependencies:
+
+```bash
+npm install
+```
+
+2. Copy `.env.example` to `.env.local` and add your Hygraph Content API endpoint:
+
+```bash
+cp .env.example .env.local
+```
+
+```env
+HYGRAPH_ENDPOINT=https://your-region.hygraph.com/v2/your-project-id/master
+```
+
+You can find this in your Hygraph project under **Settings → API Access → Content API**.
+
+3. Make sure Public API read access is enabled for `Product` and `Category` models on the `PUBLISHED` stage in your Hygraph project settings.
+
+4. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the store.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Getting Started (starter branch)
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Switch to the `starter` branch — no environment variables needed. The store reads from a local JSON file at `data/woocommerce-products-export.json`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+```bash
+git checkout starter
+npm install
+npm run dev
+```
