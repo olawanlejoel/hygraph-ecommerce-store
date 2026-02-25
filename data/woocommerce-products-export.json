@@ -1,0 +1,322 @@
+{
+  "export_info": {
+    "platform": "WooCommerce",
+    "version": "8.4.0",
+    "wordpress_version": "6.4.2",
+    "exported_at": "2024-01-15T10:30:00Z",
+    "store_name": "TechHaven Store",
+    "store_url": "https://techhaven.store",
+    "total_products": 10
+  },
+  "products": [
+    {
+      "id": 1001,
+      "name": "Apple MacBook Pro 14-inch (M3 Pro)",
+      "slug": "apple-macbook-pro-14-m3-pro",
+      "sku": "AAPL-MBP14-M3P-SG",
+      "type": "simple",
+      "status": "publish",
+      "short_description": "The most powerful MacBook Pro ever. Supercharged by M3 Pro chip for next-level performance.",
+      "description": "<p>The Apple MacBook Pro 14-inch with M3 Pro chip delivers extraordinary performance for demanding workflows. With up to 18-hour battery life, a stunning Liquid Retina XDR display, and the power of Apple Silicon, it redefines what a pro laptop can do.</p><ul><li>M3 Pro chip with 11-core CPU and 14-core GPU</li><li>18GB unified memory</li><li>512GB SSD storage</li><li>14.2-inch Liquid Retina XDR display</li><li>Up to 18 hours battery life</li><li>Three Thunderbolt 4 ports, HDMI, SD card slot</li></ul>",
+      "regular_price": "1999.00",
+      "sale_price": "1849.00",
+      "currency": "USD",
+      "stock_status": "instock",
+      "stock_quantity": 24,
+      "categories": ["Laptops", "Apple"],
+      "tags": ["macbook", "apple", "laptop", "m3", "pro"],
+      "images": [
+        {
+          "id": 5001,
+          "src": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80",
+          "name": "macbook-pro-14-front.jpg",
+          "alt": "Apple MacBook Pro 14-inch front view",
+          "position": 0
+        },
+        {
+          "id": 5002,
+          "src": "https://images.unsplash.com/photo-1484788984921-03950022c9ef?w=800&q=80",
+          "name": "macbook-pro-14-open.jpg",
+          "alt": "Apple MacBook Pro 14-inch open on desk",
+          "position": 1
+        }
+      ]
+    },
+    {
+      "id": 1002,
+      "name": "Samsung Galaxy S24 Ultra",
+      "slug": "samsung-galaxy-s24-ultra",
+      "sku": "SMSNG-GS24U-256-TBK",
+      "type": "simple",
+      "status": "publish",
+      "short_description": "The ultimate Galaxy experience with built-in S Pen, 200MP camera, and titanium design.",
+      "description": "<p>The Samsung Galaxy S24 Ultra is the pinnacle of Galaxy innovation. Crafted from titanium and powered by Snapdragon 8 Gen 3, it combines AI-powered photography, a built-in S Pen, and a brilliant 6.8-inch Dynamic AMOLED display.</p><ul><li>6.8-inch Dynamic AMOLED 2X display, 120Hz</li><li>Snapdragon 8 Gen 3 processor</li><li>200MP main camera + 50MP periscope telephoto</li><li>Built-in S Pen</li><li>5000mAh battery with 45W fast charging</li><li>256GB storage, 12GB RAM</li></ul>",
+      "regular_price": "1299.99",
+      "sale_price": "",
+      "currency": "USD",
+      "stock_status": "instock",
+      "stock_quantity": 58,
+      "categories": ["Smartphones", "Samsung"],
+      "tags": ["samsung", "galaxy", "android", "s-pen", "5g"],
+      "images": [
+        {
+          "id": 5003,
+          "src": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800&q=80",
+          "name": "samsung-s24-ultra-front.jpg",
+          "alt": "Samsung Galaxy S24 Ultra front view",
+          "position": 0
+        },
+        {
+          "id": 5004,
+          "src": "https://images.unsplash.com/photo-1567581935884-3349723552ca?w=800&q=80",
+          "name": "samsung-s24-ultra-back.jpg",
+          "alt": "Samsung Galaxy S24 Ultra camera module",
+          "position": 1
+        }
+      ]
+    },
+    {
+      "id": 1003,
+      "name": "Sony WH-1000XM5 Wireless Headphones",
+      "slug": "sony-wh-1000xm5-wireless-headphones",
+      "sku": "SONY-WH1000XM5-BLK",
+      "type": "simple",
+      "status": "publish",
+      "short_description": "Industry-leading noise cancellation meets exceptional sound quality in an ultra-lightweight design.",
+      "description": "<p>The Sony WH-1000XM5 redefines wireless noise-canceling headphones with 8 microphones and two processors delivering the best noise cancellation ever. Enjoy 30-hour battery life and industry-leading call quality.</p><ul><li>Industry-leading noise cancellation with Integrated Processor V1</li><li>8 microphones for precise voice pickup</li><li>30-hour battery life with quick charging (3 min = 3 hours)</li><li>Multipoint connection — connect to two devices simultaneously</li><li>Speak-to-Chat and Auto NC Optimizer</li><li>Hi-Res Audio and LDAC support</li></ul>",
+      "regular_price": "399.99",
+      "sale_price": "329.99",
+      "currency": "USD",
+      "stock_status": "instock",
+      "stock_quantity": 112,
+      "categories": ["Audio", "Headphones"],
+      "tags": ["sony", "headphones", "noise-canceling", "wireless", "bluetooth"],
+      "images": [
+        {
+          "id": 5005,
+          "src": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80",
+          "name": "sony-wh1000xm5-main.jpg",
+          "alt": "Sony WH-1000XM5 headphones",
+          "position": 0
+        },
+        {
+          "id": 5006,
+          "src": "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&q=80",
+          "name": "sony-wh1000xm5-worn.jpg",
+          "alt": "Sony WH-1000XM5 worn by person",
+          "position": 1
+        }
+      ]
+    },
+    {
+      "id": 1004,
+      "name": "Dell XPS 15 (9530)",
+      "slug": "dell-xps-15-9530",
+      "sku": "DELL-XPS15-9530-I9",
+      "type": "simple",
+      "status": "publish",
+      "short_description": "A masterpiece of engineering — stunning OLED display, Intel Core i9, and NVIDIA RTX 4060.",
+      "description": "<p>The Dell XPS 15 is the complete package for creators and professionals. Featuring an InfinityEdge OLED display, 13th Gen Intel Core i9 processor, and NVIDIA GeForce RTX 4060 graphics, it handles everything from video editing to 3D rendering.</p><ul><li>15.6-inch 3.5K OLED touch display, 60Hz</li><li>13th Gen Intel Core i9-13900H processor</li><li>NVIDIA GeForce RTX 4060 8GB GDDR6</li><li>32GB DDR5 RAM, 1TB NVMe SSD</li><li>86Whr battery with 130W USB-C charging</li><li>Killer Wi-Fi 6E, Bluetooth 5.3</li></ul>",
+      "regular_price": "2499.00",
+      "sale_price": "",
+      "currency": "USD",
+      "stock_status": "instock",
+      "stock_quantity": 15,
+      "categories": ["Laptops", "Dell"],
+      "tags": ["dell", "xps", "laptop", "oled", "rtx", "creator"],
+      "images": [
+        {
+          "id": 5007,
+          "src": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&q=80",
+          "name": "dell-xps15-front.jpg",
+          "alt": "Dell XPS 15 laptop front view",
+          "position": 0
+        },
+        {
+          "id": 5008,
+          "src": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80",
+          "name": "dell-xps15-side.jpg",
+          "alt": "Dell XPS 15 side profile",
+          "position": 1
+        }
+      ]
+    },
+    {
+      "id": 1005,
+      "name": "Apple iPad Pro 12.9-inch (M2)",
+      "slug": "apple-ipad-pro-12-9-m2",
+      "sku": "AAPL-IPADPRO129-M2-256",
+      "type": "simple",
+      "status": "publish",
+      "short_description": "The ultimate iPad experience. M2 chip, Liquid Retina XDR display, and Apple Pencil hover.",
+      "description": "<p>The iPad Pro 12.9-inch with M2 chip delivers desktop-class performance in a thin, portable design. The Liquid Retina XDR display with ProMotion technology makes everything look stunning whether you're editing photos or sketching with Apple Pencil.</p><ul><li>12.9-inch Liquid Retina XDR display with ProMotion (120Hz)</li><li>Apple M2 chip with 8-core CPU and 10-core GPU</li><li>256GB storage, 8GB RAM</li><li>12MP Wide + 10MP Ultra Wide cameras</li><li>Face ID, Wi-Fi 6E, Bluetooth 5.3</li><li>Thunderbolt / USB 4 connector</li></ul>",
+      "regular_price": "1099.00",
+      "sale_price": "999.00",
+      "currency": "USD",
+      "stock_status": "instock",
+      "stock_quantity": 41,
+      "categories": ["Tablets", "Apple"],
+      "tags": ["apple", "ipad", "tablet", "m2", "pro"],
+      "images": [
+        {
+          "id": 5009,
+          "src": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&q=80",
+          "name": "ipad-pro-front.jpg",
+          "alt": "Apple iPad Pro 12.9-inch front view",
+          "position": 0
+        },
+        {
+          "id": 5010,
+          "src": "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=800&q=80",
+          "name": "ipad-pro-with-pencil.jpg",
+          "alt": "Apple iPad Pro with Apple Pencil",
+          "position": 1
+        }
+      ]
+    },
+    {
+      "id": 1006,
+      "name": "Logitech MX Master 3S Mouse",
+      "slug": "logitech-mx-master-3s",
+      "sku": "LOGI-MXMASTER3S-GRY",
+      "type": "simple",
+      "status": "publish",
+      "short_description": "The most advanced master series mouse with ultra-fast MagSpeed scrolling and near-silent clicks.",
+      "description": "<p>The Logitech MX Master 3S is crafted for creatives and power users. With 8000 DPI precision tracking, near-silent clicks, and MagSpeed electromagnetic scrolling, it's the mouse that moves at the speed of your ideas.</p><ul><li>8000 DPI high-precision sensor tracks on any surface including glass</li><li>MagSpeed electromagnetic scrolling — 1000 lines/second</li><li>Near-silent, 90% quieter clicks</li><li>Logi Bolt USB + Bluetooth, connect up to 3 devices</li><li>70-day battery life with fast charging (1 min = 3 hours)</li><li>7 buttons, fully customizable via Logi Options+</li></ul>",
+      "regular_price": "99.99",
+      "sale_price": "",
+      "currency": "USD",
+      "stock_status": "instock",
+      "stock_quantity": 203,
+      "categories": ["Accessories", "Mice"],
+      "tags": ["logitech", "mouse", "wireless", "ergonomic", "productivity"],
+      "images": [
+        {
+          "id": 5011,
+          "src": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&q=80",
+          "name": "mx-master-3s-main.jpg",
+          "alt": "Logitech MX Master 3S mouse",
+          "position": 0
+        }
+      ]
+    },
+    {
+      "id": 1007,
+      "name": "LG UltraWide 34\" Curved Monitor",
+      "slug": "lg-ultrawide-34-curved-monitor",
+      "sku": "LG-34WP85C-B",
+      "type": "simple",
+      "status": "publish",
+      "short_description": "Immersive 34-inch curved UltraWide QHD display with USB-C 96W charging and Nano IPS technology.",
+      "description": "<p>The LG 34WP85C-B delivers an immersive UltraWide viewing experience with a curved Nano IPS panel, WQHD resolution, and 160Hz refresh rate. Simplify your setup with a single Thunderbolt 4 / USB-C cable for video, data, and 96W power delivery.</p><ul><li>34-inch 21:9 curved Nano IPS display</li><li>3440x1440 WQHD resolution, 160Hz refresh rate</li><li>1ms GtG response time, HDR10</li><li>USB-C with 96W Power Delivery</li><li>Thunderbolt 4, 2x HDMI 2.0, DisplayPort 1.4</li><li>VESA DisplayHDR 400, sRGB 99%</li></ul>",
+      "regular_price": "799.99",
+      "sale_price": "649.99",
+      "currency": "USD",
+      "stock_status": "instock",
+      "stock_quantity": 32,
+      "categories": ["Monitors", "LG"],
+      "tags": ["lg", "monitor", "ultrawide", "curved", "4k", "usb-c"],
+      "images": [
+        {
+          "id": 5012,
+          "src": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80",
+          "name": "lg-ultrawide-monitor-front.jpg",
+          "alt": "LG UltraWide 34 inch curved monitor",
+          "position": 0
+        },
+        {
+          "id": 5013,
+          "src": "https://images.unsplash.com/photo-1593640495253-23196b27a87f?w=800&q=80",
+          "name": "lg-ultrawide-monitor-desk.jpg",
+          "alt": "LG UltraWide monitor on desk setup",
+          "position": 1
+        }
+      ]
+    },
+    {
+      "id": 1008,
+      "name": "Apple AirPods Pro (2nd Gen)",
+      "slug": "apple-airpods-pro-2nd-gen",
+      "sku": "AAPL-AIRPODSPRO2-WHT",
+      "type": "simple",
+      "status": "publish",
+      "short_description": "Next-level Active Noise Cancellation, Transparency mode, and Adaptive Audio in a new MagSafe case.",
+      "description": "<p>AirPods Pro deliver up to 2x more Active Noise Cancellation than the previous generation, plus a new Transparency mode that lets you hear the world around you in an incredibly natural way. Adaptive Audio dynamically blends ANC and Transparency.</p><ul><li>Up to 2x more Active Noise Cancellation</li><li>Adaptive Audio — new listening mode</li><li>Personalized Spatial Audio with dynamic head tracking</li><li>Up to 6 hours listening time (30 hours total with case)</li><li>MagSafe Charging Case with built-in speaker</li><li>IP54 dust and water resistance</li></ul>",
+      "regular_price": "249.00",
+      "sale_price": "",
+      "currency": "USD",
+      "stock_status": "instock",
+      "stock_quantity": 87,
+      "categories": ["Audio", "Apple", "Earbuds"],
+      "tags": ["apple", "airpods", "wireless", "noise-canceling", "earbuds"],
+      "images": [
+        {
+          "id": 5014,
+          "src": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800&q=80",
+          "name": "airpods-pro-2-case.jpg",
+          "alt": "Apple AirPods Pro 2nd gen with case",
+          "position": 0
+        }
+      ]
+    },
+    {
+      "id": 1009,
+      "name": "Keychron Q1 Pro QMK Mechanical Keyboard",
+      "slug": "keychron-q1-pro-qmk-mechanical-keyboard",
+      "sku": "KEYCHRON-Q1PRO-RGB-BRN",
+      "type": "simple",
+      "status": "publish",
+      "short_description": "Fully customizable QMK/VIA wireless mechanical keyboard with gasket mount and aluminum body.",
+      "description": "<p>The Keychron Q1 Pro is a premium wireless mechanical keyboard with a solid aluminum frame, gasket-mount design for a bouncy typing feel, and full QMK/VIA support for unlimited customization. Works both wired and wireless via Bluetooth 5.1.</p><ul><li>75% layout — compact yet functional</li><li>Aluminum CNC machined body</li><li>Gasket-mount design for soft, bouncy typing</li><li>QMK/VIA fully programmable</li><li>Bluetooth 5.1 (3 devices) + USB-C wired</li><li>Gateron G Pro Brown switches (hot-swappable)</li><li>Per-key RGB backlight</li></ul>",
+      "regular_price": "199.99",
+      "sale_price": "179.99",
+      "currency": "USD",
+      "stock_status": "instock",
+      "stock_quantity": 67,
+      "categories": ["Accessories", "Keyboards"],
+      "tags": ["keychron", "keyboard", "mechanical", "wireless", "qmk", "75%"],
+      "images": [
+        {
+          "id": 5015,
+          "src": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80",
+          "name": "keychron-q1-pro-top.jpg",
+          "alt": "Keychron Q1 Pro mechanical keyboard top view",
+          "position": 0
+        },
+        {
+          "id": 5016,
+          "src": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800&q=80",
+          "name": "keychron-q1-pro-rgb.jpg",
+          "alt": "Keychron Q1 Pro with RGB lighting",
+          "position": 1
+        }
+      ]
+    },
+    {
+      "id": 1010,
+      "name": "Anker 737 GaNPrime 120W Charger",
+      "slug": "anker-737-ganprime-120w-charger",
+      "sku": "ANKER-A2148-BLK",
+      "type": "simple",
+      "status": "publish",
+      "short_description": "Charge 3 devices at full speed simultaneously with 120W GaNPrime technology in a compact design.",
+      "description": "<p>The Anker 737 GaNPrime Charger uses next-generation GaN technology to intelligently distribute 120W of power across three devices. Charge a MacBook Pro, iPhone, and AirPods — all at the same time, all at full speed.</p><ul><li>120W total output via GaNPrime technology</li><li>2x USB-C ports (up to 100W each) + 1x USB-A port</li><li>ActiveShield 2.0 — monitors temperature 3 million times per day</li><li>Dynamic Power Distribution adjusts power between devices</li><li>Foldable plug, compact 60% smaller than original chargers</li><li>Compatible with MacBook Pro, iPhone 15, Galaxy S24, and more</li></ul>",
+      "regular_price": "95.99",
+      "sale_price": "79.99",
+      "currency": "USD",
+      "stock_status": "outofstock",
+      "stock_quantity": 0,
+      "categories": ["Accessories", "Chargers"],
+      "tags": ["anker", "charger", "usb-c", "gan", "120w", "fast-charge"],
+      "images": [
+        {
+          "id": 5017,
+          "src": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800&q=80",
+          "name": "anker-737-charger.jpg",
+          "alt": "Anker 737 GaNPrime 120W charger",
+          "position": 0
+        }
+      ]
+    }
+  ]
+}

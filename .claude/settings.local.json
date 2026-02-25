@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__hygraph__create_entry",
+      "mcp__hygraph__publish_entry"
+    ]
+  }
+}
